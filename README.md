@@ -10,7 +10,7 @@ Question 1 : Cac40 est une valeur a observer. Quand elle change le broker doit e
 
 Question 2 : Number possède une valeur à 0 par défaut. Le clic sur le boutton + additionne la valeur tandis que le bouton - fait l'inverse.
 On peut aussi directement modifier la valeur de number dans l'input du JTextField. Le découpage du code attendu est en MVC, Le modèle number doit notifier le changement.
-La vue doit observer le modèle est appliqué le changement sur le textField. Le controlleur doit gérer les évènements.
+La vue doit observer le modèle et appliquer le changement sur le textField. Le controlleur doit gérer les évènements.
 
 Une fois votre TP terminé il est impératif de le sauvegarder sur votre github en public et de me partager le lien.
 
