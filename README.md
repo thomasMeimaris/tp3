@@ -1,6 +1,8 @@
 Bienvenue sur le TP3 de NFP121
 
 La question 1 implémente le design pattern observer
+
+
 La question 2 en donne un exemple pratique à l'aide d'une interface graphique et du design pattern MVC
 
 Question 1 : Cac40 est une valeur a observer. Quand elle change le broker doit en être avertie (il possède un booleen qui passe à true quand cac40 change).
