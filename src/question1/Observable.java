@@ -35,6 +35,4 @@ public abstract class Observable {
     }
 
     protected abstract void notifyObserver();
-
-
 }

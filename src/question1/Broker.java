@@ -5,7 +5,7 @@ public class Broker implements Observer{
     private boolean changeDetected = false;
 
     public boolean isChangeDetected() {
-        return changeDetected;
+        return this.changeDetected;
     }
 
 

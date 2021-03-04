@@ -29,5 +29,4 @@ public class ObservableTest {
         cac40.setValue(10);
         assertTrue(broker.isChangeDetected());
     }
-
 }
