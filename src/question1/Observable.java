@@ -1,6 +1,6 @@
 package question1;
-
-
-public abstract class Observable {
-
-}
+//
+//
+//public abstract class Observable {
+//
+//}

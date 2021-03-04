@@ -1,5 +1,5 @@
 package question1;
-
-public interface Observer {
-    void update();
-}
+//
+//public interface Observer {
+//    void update();
+//}
