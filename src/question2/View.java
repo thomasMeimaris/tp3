@@ -3,7 +3,7 @@ package question2;
 import javax.swing.*;
 
 
-public class View  {
+public class View  implements Observer{
     private JTextField jTextField;
     private JButton jButton1;
     private JButton jButton2;
@@ -40,4 +40,23 @@ public class View  {
 
         number.addObserver(this);
     }
+
+    @Override
+    public void update(String p_value) {
+        this.jTextField.setText(p_value);
+    }
+
+    public JTextField getjTextField() {
+        return jTextField;
+    }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+
 }
