@@ -1,7 +1,9 @@
 package question2;
 
 
-public class Number extends Observable{
+import java.util.Observable;
+
+public class Number extends Observable {
 
     public int getValue() {
         return this.value;
@@ -9,7 +11,8 @@ public class Number extends Observable{
 
     public void setValue(int p_value) {
         this.value = p_value;
-        this.notifyObserver();
+        this.setChanged();
+        this.notifyObservers(this.value);
         System.out.println("valeur : " + p_value);
     }
 
@@ -27,11 +30,5 @@ public class Number extends Observable{
         this.setValue(this.getValue() -1 );
     }
 
-    @Override
-    public void notifyObserver() {
-        for(Observer observer : this.observerList){
-            observer.update(Integer.toString(this.value));
-        }
-    }
 
 }

@@ -19,13 +19,13 @@ public class Controller {
         this.view.getjButton1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                control('+');
+                model.increment();
             }
         });
         this.view.getjButton2().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                control('-');
+                model.decrement();
             }
         });
 
@@ -33,28 +33,8 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String stringValue = view.getjTextField().getText();
-                control(Integer.valueOf(stringValue));
+                model.setValue(Integer.valueOf(stringValue));
             }
         });
-
     }
-
-    private void control(char p_signe){
-        switch (p_signe){
-            case '+':
-                this.model.increment();
-                break;
-            case '-':
-                this.model.decrement();
-                break;
-            default:
-                System.out.println("mauvaise utilisation de la fonction !");
-                break;
-        }
-    }
-
-    private void control(int p_value){
-        this.model.setValue(p_value);
-    }
-
 }

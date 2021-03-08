@@ -1,9 +1,11 @@
 package question2;
 
 import javax.swing.*;
+import java.util.Observable;
+import java.util.Observer;
 
 
-public class View  implements Observer{
+public class View  implements Observer {
     private JTextField jTextField;
     private JButton jButton1;
     private JButton jButton2;
@@ -42,8 +44,9 @@ public class View  implements Observer{
     }
 
     @Override
-    public void update(String p_value) {
-        this.jTextField.setText(p_value);
+    public void update(Observable o, Object arg) {
+        String value = String.valueOf(arg);
+        this.jTextField.setText(value);
     }
 
     public JTextField getjTextField() {
@@ -57,6 +60,5 @@ public class View  implements Observer{
     public JButton getjButton2() {
         return jButton2;
     }
-
 
 }
