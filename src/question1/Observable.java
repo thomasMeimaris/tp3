@@ -7,17 +7,6 @@ public abstract class Observable {
 
     protected ArrayList<Observer> observerList;
 
-    protected int value;
-
-    public int getValue() {
-        return this.value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-        this.notifyObserver();
-    }
-
     public Observable(){
         this.observerList = new ArrayList<Observer>();
     }
@@ -34,5 +23,9 @@ public abstract class Observable {
         return this.observerList.size();
     }
 
-    protected abstract void notifyObserver();
+    protected void notifyObserver(){
+        for(Observer observer : this.observerList){
+            observer.update();
+        }
+    }
 }
